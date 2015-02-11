@@ -1,0 +1,24 @@
+.toolTip{
+    position: relative;
+    }
+.toolTip span{
+    display: block;
+    border: solid 2px #999;
+    background-color: #eee;
+    color: #666;
+    text-decoration: none;
+    position: absolute;
+    
+    top: 20px;
+    left: 10px;
+    
+    padding: 5px;
+    visibility: hidden;
+    /*
+    width: 150px;
+    */
+    }
+a.toolTip:hover,a.toolTip:hover span{
+    visibility: visible;
+    z-index: 100;
+    } 

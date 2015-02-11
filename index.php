@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="cssproto.css" type="text/css">
+
 <html>
     <body>
         
@@ -5,6 +9,7 @@
 <?php
     //参考
     //http://developer.yahoo.co.jp/webapi/shopping/shopping/v1/itemsearch.html
+    //http://css-eblog.com/csstechnique/post-14.html
     
     require_once './search.php';
 
@@ -28,11 +33,16 @@
         $URL = $result[Url];
         $NAME = $result[Name];
         $IMG = $result[Image][Medium];
+        $exp = $result[Headline];
+        $store_name = $result[Store][Name];
         printf("<p><img src=".$IMG.">");
-        printf("<a href=".$URL.">".$NAME."</a></p>");
-        ?>
-        </div>
-        <?php
+        printf("<a href=\"".$URL."\"class=\"toolTip\">".$NAME);
+        printf("<span>".$exp."</span>");
+        printf("</a>");
+        printf("</p>");
+        printf("<p>".$store_name."</p>");
+        printf("</div>");
+        
     };
     
 ?>
