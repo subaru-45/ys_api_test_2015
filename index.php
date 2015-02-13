@@ -6,14 +6,27 @@
     <body>
         
         
+    <form action="index.php" method="post">
+    <div>
+    <input type="text" name="text" class="textBox"><input type="submit" value="検索" >
+    </div>
+    </form>
+    
+        
+        
 <?php
+    
+    if($_POST["text"] != NULL){
+
+
+
     //参考
     //http://developer.yahoo.co.jp/webapi/shopping/shopping/v1/itemsearch.html
     //http://css-eblog.com/csstechnique/post-14.html
     
     require_once './search.php';
 
-    $text = "vaio";
+    $text = $_POST["text"];
     $return = search($text);
     
     /*
@@ -43,6 +56,12 @@
         printf("<p>".$store_name."</p>");
         printf("</div>");
         
+    };
+    
+    }else{
+    ?>
+    
+    <?php
     };
     
 ?>
