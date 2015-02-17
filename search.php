@@ -5,7 +5,7 @@ function search($search){
         //http://www.goinkyo.jp/isaoa/?i=2010/06/15-222120
         
         $request_url = "http://shopping.yahooapis.jp/ShoppingWebService/V1/itemSearch";
-        $appid = "dj0zaiZpPWNEckFvakZ3dmd1bSZzPWNvbnN1bWVyc2VjcmV0Jng9N2M-";
+        $appid = "xD";
         
         $appid = rawurlencode($appid);
         $search = rawurlencode($search);
